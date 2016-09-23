@@ -1,0 +1,87 @@
+#操作DOM
+
+Dom是一组对象的集合，这些对象代表了HTML文档中的各个元素。一旦你对DOM做了改动。浏览器就会让文档发生相应的变化。
+
+#原生js操作DOM
+
+##1.查找元素
+getElementById()、getElementByTagName()、getElementByClassName()、getElementsByName()、querySelectorAll()
+
+##2.创建DOM
+你需要用document对象创建新的元素。
+document.creatElement();此方法返回的是HTMLElment。
+document.creatTextNode();此方法创建一个带有指定内容的新Text对象。
+
+```
+	var body = document.getElementsByTagName("body");
+	var div = body[0].appendChild(document.createElement("span"));
+	div.appendChild(document.createTextNode("hahahaha"));
+
+```
+
+##3.删除DOM
+removeChild()
+
+```
+	var body = document.getElementsByTagName("body");
+	var span = body[0].getElementsByTagName("span");
+	body[0].removeChild(span);
+
+```
+
+##4.复制元素
+可以使用cloneNode方法来复制现有的元素。这个方法有时候很方便。因为它运行你不必从头开始创建想要的元素。
+
+```
+	var body = document.getElementsByTagName("body");
+	var newElem = body[0].cloneNode(true);
+	console.log(newElem);
+
+```
+##5.移动元素
+要把元素从文档的一处移到另一处。需要做的仅仅是把待移动的元素关联到新的父元素上。而不需要让该元素脱离它的初始位置。
+
+```
+	var elm = document.getElementByTagName("span");
+	var body = document.getElementByTagName("body");
+	body[0].appendChild(elm[0]);
+
+```
+
+##6.插入元素
+appendChild()、innerHTML、outerHTML、replaceChild(HTMLElement,HTMLElement)、insertAdjacentHTML()
+
+
+
+#jQuery操作DOM
+
+##1.创建DOM
+$("div")
+
+```
+	console.log($("div"));
+	console.log($("body"));
+	console.log($("span"));
+
+```
+
+##2.删除DOM
+detach()、empty()、remove()、unwrap()
+
+```
+
+```
+
+##3.复制元素
+clone()
+
+```
+
+```
+##4.移动元素
+要把元素从文档的一处移到另一处。需要做的仅仅是把待移动的元素关联到新的父元素上。而不需要让该元素脱离它的初始位置。
+
+```
+```
+
+##5.插入元素
