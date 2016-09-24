@@ -30,7 +30,7 @@ document.creatTextNode();此方法创建一个带有指定内容的新Text对象
 ```
 
 ##3.删除DOM
-*removeChild()
+*	removeChild()
 
 ```
 	var body = document.getElementsByTagName("body");
