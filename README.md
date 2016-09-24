@@ -38,9 +38,9 @@ document.creatTextNode();此方法创建一个带有指定内容的新Text对象
 	body[0].removeChild(span);
 
 ```
-*利用innerHTML
+*	利用innerHTML
 
-*利用outerHTML
+*	利用outerHTML
 
 ##4.复制元素
 可以使用cloneNode方法来复制现有的元素。这个方法有时候很方便。因为它运行你不必从头开始创建想要的元素。
@@ -62,15 +62,15 @@ document.creatTextNode();此方法创建一个带有指定内容的新Text对象
 ```
 
 ##6.插入元素
-*appendChild()
+*	appendChild()
 
-*innerHTML
+*	innerHTML
 
-*outerHTML
+*	outerHTML
 
-*replaceChild(HTMLElement,HTMLElement)
+*	replaceChild(HTMLElement,HTMLElement)
 
-*insertAdjacentHTML()
+*	insertAdjacentHTML()
 
 
 
