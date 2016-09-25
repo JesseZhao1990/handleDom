@@ -168,9 +168,42 @@
 <h2>
 <a id="3删除dom-1" class="anchor" href="#3%E5%88%A0%E9%99%A4dom-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.删除DOM</h2>
 
-<p>detach() 从dom中删除元素并保留关联在dom上的数据</p>
+<p>detach() 从dom中
+删除元素并保留关联在dom上的数据</p>
 
-<pre><code></code></pre>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"&gt;
+&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+    var x;
+        $("p").click(function(){
+         alert("hhhhhh");
+})
+    $("#btn1").click(function(){
+        x=$("p").detach();
+    });
+    $("#btn2").click(function(){
+        $("body").prepend(x);
+    });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;这是一个段落。&lt;/p&gt;
+&lt;button id="btn1"&gt;移除P元素&lt;/button&gt;
+&lt;button id="btn2"&gt;恢复P元素&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+
 <p>remove()  从dom中删除元素，不保留关联在dom上的数据</p>
 
 <pre><code>$("body").remove();
@@ -179,12 +212,14 @@
 
 <p>empty()  删除jquery对象中所有的子元素</p>
 
-<pre><code>
+<pre><code>$("body").empty();
+
 </code></pre>
 
 <p>unwrap()  删除jquery对象中每个元素的父元素</p>
 
-<pre><code>
+<pre><code>$("p").unwrap();
+
 </code></pre>
 
 <h2>
@@ -192,7 +227,8 @@
 
 <p>clone()</p>
 
-<pre><code>
+<pre><code>var a = $.("p").clone();
+
 </code></pre>
 
 <h2>
@@ -203,6 +239,13 @@
 <pre><code></code></pre>
 <h2>
 <a id="6插入元素-1" class="anchor" href="#6%E6%8F%92%E5%85%A5%E5%85%83%E7%B4%A0-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6.插入元素</h2>
+
+<p>append()、appendTo()、prepend()、prependTo()、wrap()、wrapAll()、wrapInner()、after()、before()、insertAfter()、insertBefore()</p>
+
+<h2>
+<a id="7替换元素" class="anchor" href="#7%E6%9B%BF%E6%8D%A2%E5%85%83%E7%B4%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>7.替换元素</h2>
+
+<p>replaceWith()、replaceAll()</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/JesseZhao1990/handleDom">Handledom</a> is maintained by <a href="https://github.com/JesseZhao1990">JesseZhao1990</a>.</span>
