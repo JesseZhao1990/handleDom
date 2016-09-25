@@ -204,4 +204,7 @@ var a = $.("p").clone();
 ```
 
 ##6.插入元素
-append()、appendTo()、prepend()、prependTo()、wrap()、wrapAll()、wrapInner()
+append()、appendTo()、prepend()、prependTo()、wrap()、wrapAll()、wrapInner()、after()、before()、insertAfter()、insertBefore()
+
+##7.替换元素
+replaceWith()、replaceAll()
