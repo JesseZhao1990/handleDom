@@ -131,9 +131,41 @@ $("div")
 ```
 
 ##3.删除DOM
-detach() 从dom中删除元素并保留关联在dom上的数据
+detach() 从dom中
+删除元素并保留关联在dom上的数据
 
 ```
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+	var x;
+        $("p").click(function(){
+         alert("hhhhhh");
+})
+	$("#btn1").click(function(){
+		x=$("p").detach();
+	});
+	$("#btn2").click(function(){
+		$("body").prepend(x);
+	});
+});
+</script>
+</head>
+<body>
+
+<p>这是一个段落。</p>
+<button id="btn1">移除P元素</button>
+<button id="btn2">恢复P元素</button>
+
+</body>
+</html>
+
 ```
 
 remove()  从dom中删除元素，不保留关联在dom上的数据
@@ -146,6 +178,7 @@ $("body").remove();
 empty()  删除jquery对象中所有的子元素
 
 ```
+$("body").empty();
 
 ```
 
@@ -153,6 +186,7 @@ empty()  删除jquery对象中所有的子元素
 unwrap()  删除jquery对象中每个元素的父元素
 
 ```
+$("p").unwrap();
 
 ```
 
@@ -160,6 +194,7 @@ unwrap()  删除jquery对象中每个元素的父元素
 clone()
 
 ```
+var a = $.("p").clone();
 
 ```
 ##5.移动元素
@@ -169,3 +204,4 @@ clone()
 ```
 
 ##6.插入元素
+append()、appendTo()、prepend()、prependTo()、wrap()、wrapAll()、wrapInner()
